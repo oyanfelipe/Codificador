@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../static/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ddf289598f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Decodificador de texto</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navegacao">
+        <h1 class="logo">Cripto</h1>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="sect1">
+        <form action="">
+          <div class="divtext">
+            <textarea
+              type="text"
+              id="texto"
+              class="areatext"
+              onkeyup="this.value=retira_acentos(this.value);"
+              oninput="handleInput(event)"
+              placeholder="Digite seu texto"
+            ></textarea>
+          </div>
+          <div class="divbutao">
+            <button
+              class="button1"
+              id="btn1"
+              type="button"
+              onclick="criptografar()"
+            >
+              Criptografar
+            </button>
+            <button
+              class="button2"
+              id="btn2"
+              type="button"
+              onclick="descriptografar()"
+            >
+              Descriptografar
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="sect2">
+        <div class="divtext2">
+          <div class="texto">
+            <pre class="paragrafo" id="para"></pre>
+          </div>
+          <div class="divbutao2">
+            <button
+              class="button3"
+              id="btnCopy">Copiar</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="footer-content">
+        <ul class="socials">
+          <li>
+            <a href="https://github.com/oyanfelipe"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li></li>
+          <li>
+            <a href="https://linkedin.com/in/yanfelipe"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </li>
+          <li></li>
+          <li>
+            <a href="https://instagram.com/oyanfelipe"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          copyright &copy;2022 codeOpacity. designed by <span>Yan Felipe</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
